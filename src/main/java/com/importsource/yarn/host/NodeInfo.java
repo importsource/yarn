@@ -9,7 +9,7 @@ import org.hyperic.sigar.SigarException;
  * @author Hezf
  *
  */
-public class CpuInfo {
+public class NodeInfo {
 	private static Sigar sigar = new Sigar();
 	private int mhz;
 	private String vendor;
@@ -27,10 +27,23 @@ public class CpuInfo {
 		} catch (SigarException e) {
 			return 0;
 		}
+	       
+	}
+	
+	/**
+	 * 得到当前剩余内存
+	 * @return
+	 */
+	public static double getMemory() {
+	       try {
+			return sigar.getMem().getFree();
+		} catch (SigarException e) {
+			return 0;
+		}
 	}
 	//private String get
 	public static void main(String[] args) throws SigarException{
-		CpuInfo cpu=new CpuInfo();
+		NodeInfo cpu=new NodeInfo();
 		System.out.println(cpu.getIdle());
 		cpu();
 	}

@@ -43,7 +43,7 @@ public class RuntimeTest {
             cpu();
             System.out.println("----------------------------------");
             // 内存信息
-            //memory();
+            memory();
             System.out.println("----------------------------------");
             // 操作系统信息
             //os();

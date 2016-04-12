@@ -17,4 +17,7 @@ package com.importsource.yarn.rpc.service;
 *
 *
 *
+*我把一个jar包上传到hdfs。然后告诉指定的机器说，快去下载并启动这些jar。
+*
+*
 **/
