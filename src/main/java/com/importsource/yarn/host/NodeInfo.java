@@ -10,6 +10,7 @@ import org.hyperic.sigar.SigarException;
  *
  */
 public class NodeInfo {
+	//通过sigar来获取主机信息
 	private static Sigar sigar = new Sigar();
 	private int mhz;
 	private String vendor;
